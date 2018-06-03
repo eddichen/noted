@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import base from "./base";
+import base from "../../base";
 
-class App extends Component {
+class AddNote extends Component {
   state = {
     notes: {}
   };
@@ -23,7 +23,6 @@ class App extends Component {
     const title = this.noteTitle.value;
     const content = this.noteContent.value;
     const notes = { ...this.state.notes };
-
     notes[createdAt] = {
       createdAt,
       title,
@@ -35,7 +34,7 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
+      <div>
         <form method="post" onSubmit={this.addNote}>
           <label htmlFor="noteTitle">Title</label>
           <input
@@ -61,4 +60,4 @@ class App extends Component {
   }
 }
 
-export default App;
+export default AddNote;
