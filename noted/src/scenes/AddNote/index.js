@@ -23,7 +23,7 @@ class AddNote extends Component {
     const title = this.noteTitle.value;
     const content = this.noteContent.value;
     const notes = { ...this.state.notes };
-    notes[createdAt] = {
+    notes[`note${createdAt}`] = {
       createdAt,
       title,
       content
