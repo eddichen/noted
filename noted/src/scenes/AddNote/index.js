@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { withRouter } from "react-router-dom";
 import base from "../../base";
 
 class AddNote extends Component {
@@ -30,6 +31,7 @@ class AddNote extends Component {
     };
     this.setState({ notes });
     e.currentTarget.reset();
+    this.props.history.push("/");
   };
 
   render() {
