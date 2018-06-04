@@ -1,10 +1,16 @@
 import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
+import Modal from "react-modal";
 import base from "../../base";
+import EditNote from "../EditNote/index";
+
+Modal.setAppElement("#root");
 
 class ListNotes extends Component {
   state = {
-    notes: {}
+    notes: {},
+    modalIsOpen: false,
+    activeNote: ""
   };
 
   componentDidMount() {
@@ -18,6 +24,17 @@ class ListNotes extends Component {
     base.removeBinding(this.refNotes);
   }
 
+  openModal = key => {
+    this.setState({ activeNote: key });
+    this.setState({ modalIsOpen: true });
+  };
+
+  afterOpenModal = () => {};
+
+  closeModal = () => {
+    this.setState({ modalIsOpen: false });
+  };
+
   render() {
     return (
       <div>
@@ -26,10 +43,19 @@ class ListNotes extends Component {
         <ul>
           {Object.keys(this.state.notes).map(key => (
             <li key={key}>
-              <h3>{this.state.notes[key].title}</h3>
+              <button onClick={() => this.openModal(key)}>
+                {this.state.notes[key].title}
+              </button>
             </li>
           ))}
         </ul>
+        <Modal
+          isOpen={this.state.modalIsOpen}
+          onRequestClose={this.closeModal}
+          contentLabel="Edit Note"
+        >
+          <EditNote details={this.state.notes[this.state.activeNote]} />
+        </Modal>
       </div>
     );
   }
