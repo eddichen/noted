@@ -1,30 +1,33 @@
 import React, { Component } from "react";
 
 class EditNote extends Component {
+  handleChange = e => {
+    const updatedNote = {
+      ...this.props.details,
+      [e.currentTarget.name]: e.currentTarget.value
+    };
+    this.props.updateNote(this.props.index, updatedNote);
+  };
+
   render() {
     return (
       <div>
-        <form method="post" onSubmit={this.addNote}>
+        <form method="post">
           <label htmlFor="noteTitle">Title</label>
           <input
             type="text"
             id="noteTitle"
             name="noteTitle"
-            ref={noteTitle => {
-              this.noteTitle = noteTitle;
-            }}
-            value={this.props.details.title}
+            value={this.props.details.noteTitle}
+            onChange={this.handleChange}
           />
           <label htmlFor="noteContent">Note</label>
           <textarea
             id="noteContent"
             name="noteContent"
-            ref={noteContent => {
-              this.noteContent = noteContent;
-            }}
-            value={this.props.details.content}
+            value={this.props.details.noteContent}
+            onChange={this.handleChange}
           />
-          <button type="submit">Add Note</button>
         </form>
       </div>
     );

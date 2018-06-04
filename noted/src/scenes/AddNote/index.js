@@ -25,8 +25,8 @@ class AddNote extends Component {
     const notes = { ...this.state.notes };
     notes[`note${createdAt}`] = {
       createdAt,
-      title,
-      content
+      noteTitle: title,
+      noteContent: content
     };
     this.setState({ notes });
     e.currentTarget.reset();
