@@ -1,3 +1,7 @@
 @import "~normalize.css";
+@import "./mixins/visuallyhidden";
 @import "./colours";
 @import "./global";
+@import "./layout";
+@import "../../components/Header/styles";
+@import "../../scenes/ListNotes/styles";

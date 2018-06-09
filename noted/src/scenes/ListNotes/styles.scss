@@ -1,0 +1,38 @@
+.list {
+  &__notes {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__button {
+    background-color: $colour-list-button-bg;
+    border: none;
+  }
+}
+
+.button {
+  &__add-note {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background-color: $colour-button-add-note-bg;
+    padding: 35px;
+    border-radius: 50%;
+
+    &:before {
+      content: "+";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      color: $colour-button-add-note-text;
+      font-family: system;
+      font-size: 40px;
+    }
+
+    &-text {
+      @include visuallyhidden;
+    }
+  }
+}

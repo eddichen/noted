@@ -1,0 +1,14 @@
+.header {
+  text-align: center;
+  background-color: $colour-header-bg;
+
+  &__link {
+    display: block;
+  }
+
+  &__title {
+    color: $colour-header-title;
+    margin: 0;
+    padding: 0.5em 0;
+  }
+}

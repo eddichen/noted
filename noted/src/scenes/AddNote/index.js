@@ -39,26 +39,28 @@ class AddNote extends Component {
     return (
       <div>
         <Header />
-        <form method="post" onSubmit={this.addNote}>
-          <label htmlFor="noteTitle">Title</label>
-          <input
-            type="text"
-            id="noteTitle"
-            name="noteTitle"
-            ref={noteTitle => {
-              this.noteTitle = noteTitle;
-            }}
-          />
-          <label htmlFor="noteContent">Note</label>
-          <textarea
-            id="noteContent"
-            name="noteContent"
-            ref={noteContent => {
-              this.noteContent = noteContent;
-            }}
-          />
-          <button type="submit">Add Note</button>
-        </form>
+        <div className="container">
+          <form method="post" onSubmit={this.addNote}>
+            <label htmlFor="noteTitle">Title</label>
+            <input
+              type="text"
+              id="noteTitle"
+              name="noteTitle"
+              ref={noteTitle => {
+                this.noteTitle = noteTitle;
+              }}
+            />
+            <label htmlFor="noteContent">Note</label>
+            <textarea
+              id="noteContent"
+              name="noteContent"
+              ref={noteContent => {
+                this.noteContent = noteContent;
+              }}
+            />
+            <button type="submit">Add Note</button>
+          </form>
+        </div>
       </div>
     );
   }

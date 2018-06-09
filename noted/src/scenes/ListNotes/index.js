@@ -46,18 +46,25 @@ class ListNotes extends Component {
     return (
       <div>
         <Header />
-        <NavLink to="/add-note">Add Note</NavLink>
-        <ul>
-          {Object.keys(this.state.notes)
-            .reverse()
-            .map(key => (
-              <li key={key}>
-                <button onClick={() => this.openModal(key)}>
-                  {this.state.notes[key].noteTitle}
-                </button>
-              </li>
-            ))}
-        </ul>
+        <div className="container">
+          <ul className="list__notes">
+            {Object.keys(this.state.notes)
+              .reverse()
+              .map(key => (
+                <li key={key}>
+                  <button
+                    onClick={() => this.openModal(key)}
+                    className="list__button"
+                  >
+                    {this.state.notes[key].noteTitle}
+                  </button>
+                </li>
+              ))}
+          </ul>
+          <NavLink to="/add-note" className="button__add-note">
+            <span className="button__add-note-text">Add Note</span>
+          </NavLink>
+        </div>
         <Modal
           isOpen={this.state.modalIsOpen}
           onRequestClose={this.closeModal}

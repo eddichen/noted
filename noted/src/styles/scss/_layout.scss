@@ -1,0 +1,8 @@
+.container {
+  position: relative;
+  padding: 15px;
+
+  @media (min-width: (768/16) + em) {
+    padding: 30px;
+  }
+}
