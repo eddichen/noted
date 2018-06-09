@@ -39,6 +39,8 @@ a {
 .list__button {
   background-color: #fff;
   border: none; }
+.list__note-item {
+  padding: 15px 0; }
 
 .button__add-note {
   position: fixed;

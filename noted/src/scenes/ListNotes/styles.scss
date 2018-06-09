@@ -9,6 +9,10 @@
     background-color: $colour-list-button-bg;
     border: none;
   }
+
+  &__note-item {
+    padding: 15px 0;
+  }
 }
 
 .button {

@@ -51,7 +51,7 @@ class ListNotes extends Component {
             {Object.keys(this.state.notes)
               .reverse()
               .map(key => (
-                <li key={key}>
+                <li key={key} className="list__note-item">
                   <button
                     onClick={() => this.openModal(key)}
                     className="list__button"
