@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import { withRouter } from "react-router-dom";
 import base from "../../base";
+import Header from "../../components/Header";
 
 class AddNote extends Component {
   state = {
@@ -37,6 +38,7 @@ class AddNote extends Component {
   render() {
     return (
       <div>
+        <Header />
         <form method="post" onSubmit={this.addNote}>
           <label htmlFor="noteTitle">Title</label>
           <input

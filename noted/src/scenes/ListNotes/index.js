@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import Modal from "react-modal";
 import base from "../../base";
+import Header from "../../components/Header";
 import EditNote from "../EditNote/index";
 
 Modal.setAppElement("#root");
@@ -44,7 +45,7 @@ class ListNotes extends Component {
   render() {
     return (
       <div>
-        <h1>List Notes</h1>
+        <Header />
         <NavLink to="/add-note">Add Note</NavLink>
         <ul>
           {Object.keys(this.state.notes)
