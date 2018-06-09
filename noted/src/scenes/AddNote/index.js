@@ -37,11 +37,17 @@ class AddNote extends Component {
 
   render() {
     return (
-      <div>
+      <div className="add-note">
         <Header />
         <div className="container">
-          <form method="post" onSubmit={this.addNote}>
-            <label htmlFor="noteTitle">Title</label>
+          <form
+            method="post"
+            onSubmit={this.addNote}
+            className="add-note__form"
+          >
+            <label htmlFor="noteTitle" className="add-note__label">
+              Title
+            </label>
             <input
               type="text"
               id="noteTitle"
@@ -49,16 +55,25 @@ class AddNote extends Component {
               ref={noteTitle => {
                 this.noteTitle = noteTitle;
               }}
+              placeholder="Add title here"
+              className="add-note__input add-note__input--title"
             />
-            <label htmlFor="noteContent">Note</label>
+            <label htmlFor="noteContent" className="add-note__label">
+              Note
+            </label>
             <textarea
               id="noteContent"
               name="noteContent"
               ref={noteContent => {
                 this.noteContent = noteContent;
               }}
+              placeholder="Add content here"
+              className="add-note__input add-note__input--content"
+              autoFocus
             />
-            <button type="submit">Add Note</button>
+            <button type="submit" className="add-note__button">
+              Add Note
+            </button>
           </form>
         </div>
       </div>

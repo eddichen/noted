@@ -1,8 +1,10 @@
 .container {
   position: relative;
   padding: 15px;
+  height: calc(100% - (64px + 30px));
 
   @media (min-width: (768/16) + em) {
     padding: 30px;
+    height: calc(100% - (64px + 60px));
   }
 }
