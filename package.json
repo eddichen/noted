@@ -1,5 +1,0 @@
-{
-  "scripts": {
-    "noted": "cd noted; npm install; npm start"
-  }
-}
