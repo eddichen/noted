@@ -1,0 +1,22 @@
+.form {
+  height: 100%;
+
+  &__label {
+    @include visuallyhidden;
+  }
+
+  &__input {
+    padding: 0 10px;
+    border: none;
+    line-height: 2;
+
+    &--title {
+      margin-bottom: 1em;
+    }
+
+    &--content {
+      height: calc(100% - (48px + 30px));
+      resize: none;
+    }
+  }
+}

@@ -1,0 +1,84 @@
+.list {
+  &__notes {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+
+  &__note-item {
+    padding: 15px 0;
+    border-bottom: 1px dashed $colour-list-item-border;
+  }
+
+  &__button {
+    background-color: $colour-list-button-bg;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 100%;
+    @media (min-width: (480/16) + em) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__note-title {
+    margin: 0;
+    font-size: 18px;
+    @media (min-width: (480/16) + em) {
+      font-size: 24px;
+      display: flex;
+    }
+  }
+
+  &__note-date {
+    font-size: 14px;
+    color: #999;
+    @media (min-width: (480/16) + em) {
+      display: flex;
+      font-size: 18px;
+    }
+  }
+}
+
+.button {
+  &__add-note {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    background-color: $colour-button-add-note-bg;
+    padding: 35px;
+    border-radius: 50%;
+
+    &:before {
+      content: "+";
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+      color: $colour-button-add-note-text;
+      font-family: system;
+      font-size: 40px;
+    }
+
+    &-text {
+      @include visuallyhidden;
+    }
+  }
+}
+
+.modal {
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 15px;
+    cursor: pointer;
+
+    &-text {
+      font-size: 40px;
+      font-weight: bold;
+      opacity: 50%;
+    }
+  }
+}

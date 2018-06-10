@@ -1,0 +1,159 @@
+@import url(~normalize.css);
+/* Header */
+/* List */
+/* Add Note */
+html,
+body,
+#root {
+  height: 100%; }
+
+body {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 1.5em;
+  color: #000; }
+
+h1,
+h2,
+h3 {
+  color: #000; }
+
+a {
+  text-decoration: none;
+  color: #000; }
+
+button {
+  border: none; }
+
+.container {
+  position: relative;
+  padding: 15px;
+  height: calc(100% - (64px + 30px)); }
+  @media (min-width: 48em) {
+    .container {
+      padding: 30px;
+      height: calc(100% - (64px + 60px)); } }
+
+.form {
+  height: 100%; }
+  .form__label {
+    border: 0;
+    clip-path: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; }
+  .form__input {
+    padding: 0 10px;
+    border: none;
+    line-height: 2; }
+    .form__input--title {
+      margin-bottom: 1em; }
+    .form__input--content {
+      height: calc(100% - (48px + 30px));
+      resize: none; }
+
+.header {
+  text-align: center;
+  background-color: #000; }
+  .header__link {
+    display: block; }
+  .header__title {
+    color: #fff;
+    margin: 0;
+    padding: 0.5em 0;
+    font-size: 30px; }
+
+.list__notes {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+.list__note-item {
+  padding: 15px 0;
+  border-bottom: 1px dashed #ccc; }
+.list__button {
+  background-color: #fff;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  width: 100%; }
+  @media (min-width: 30em) {
+    .list__button {
+      display: flex;
+      justify-content: space-between; } }
+.list__note-title {
+  margin: 0;
+  font-size: 18px; }
+  @media (min-width: 30em) {
+    .list__note-title {
+      font-size: 24px;
+      display: flex; } }
+.list__note-date {
+  font-size: 14px;
+  color: #999; }
+  @media (min-width: 30em) {
+    .list__note-date {
+      display: flex;
+      font-size: 18px; } }
+
+.button__add-note {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  background-color: #000;
+  padding: 35px;
+  border-radius: 50%; }
+  .button__add-note:before {
+    content: "+";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    color: #fff;
+    font-family: system;
+    font-size: 40px; }
+  .button__add-note-text {
+    border: 0;
+    clip-path: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; }
+
+.modal__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 15px;
+  cursor: pointer; }
+  .modal__close-text {
+    font-size: 40px;
+    font-weight: bold;
+    opacity: 50%; }
+
+.add-note {
+  height: 100%; }
+  .add-note__input {
+    width: calc(100% - 20px); }
+  .add-note__button {
+    position: fixed;
+    bottom: 15px;
+    right: 15px;
+    border-radius: 10px;
+    padding: 15px;
+    background-color: #000;
+    color: #fff; }
+    @media (min-width: 48em) {
+      .add-note__button {
+        bottom: 30px;
+        right: 30px; } }
+
+.edit-note {
+  height: 100%; }
+  .edit-note__input {
+    width: calc(100% - 20px); }
+
+/*# sourceMappingURL=index.css.map */

@@ -1,5 +1,25 @@
 {
+  "name": "noted",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "firebase": "^5.0.4",
+    "re-base": "^3.2.3",
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-modal": "^3.4.5",
+    "react-router-dom": "^4.2.2",
+    "react-scripts": "1.1.4"
+  },
   "scripts": {
-    "noted": "cd noted; npm install; npm start"
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject",
+    "sass": "sass --watch src/styles/scss:src/styles/css",
+    "noted": "npm install; npm start"
+  },
+  "devDependencies": {
+    "normalize.css": "^8.0.0"
   }
 }

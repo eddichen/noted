@@ -1,0 +1,7 @@
+.edit-note {
+  height: 100%;
+
+  &__input {
+    width: calc(100% - 20px);
+  }
+}
