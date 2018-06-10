@@ -11,22 +11,29 @@ class EditNote extends Component {
 
   render() {
     return (
-      <div>
-        <form method="post">
-          <label htmlFor="noteTitle">Title</label>
+      <div className="edit-note">
+        <form method="post" className="form">
+          <label htmlFor="noteTitle" className="form__label">
+            Title
+          </label>
           <input
             type="text"
             id="noteTitle"
             name="noteTitle"
             value={this.props.details.noteTitle}
             onChange={this.handleChange}
+            className="form__input form__input--title edit-note__input"
           />
-          <label htmlFor="noteContent">Note</label>
+          <label htmlFor="noteContent" className="form__label">
+            Note
+          </label>
           <textarea
             id="noteContent"
             name="noteContent"
             value={this.props.details.noteContent}
             onChange={this.handleChange}
+            className="form__input form__input--content edit-note__input"
+            autoFocus
           />
         </form>
       </div>

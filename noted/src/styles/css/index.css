@@ -33,6 +33,27 @@ button {
       padding: 30px;
       height: calc(100% - (64px + 60px)); } }
 
+.form {
+  height: 100%; }
+  .form__label {
+    border: 0;
+    clip-path: rect(0, 0, 0, 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px; }
+  .form__input {
+    padding: 0 10px;
+    border: none;
+    line-height: 2; }
+    .form__input--title {
+      margin-bottom: 1em; }
+    .form__input--content {
+      height: calc(100% - (48px + 30px));
+      resize: none; }
+
 .header {
   text-align: center;
   background-color: #000; }
@@ -80,29 +101,21 @@ button {
     position: absolute;
     width: 1px; }
 
+.modal__close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 0 15px;
+  cursor: pointer; }
+  .modal__close-text {
+    font-size: 40px;
+    font-weight: bold;
+    opacity: 50%; }
+
 .add-note {
   height: 100%; }
-  .add-note__form {
-    height: 100%; }
-  .add-note__label {
-    border: 0;
-    clip-path: rect(0, 0, 0, 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px; }
   .add-note__input {
-    padding: 0 10px;
-    border: none;
-    line-height: 2;
     width: calc(100% - 20px); }
-    .add-note__input--title {
-      margin-bottom: 1em; }
-    .add-note__input--content {
-      height: calc(100% - (48px + 30px));
-      resize: none; }
   .add-note__button {
     position: fixed;
     bottom: 15px;
@@ -115,5 +128,10 @@ button {
       .add-note__button {
         bottom: 30px;
         right: 30px; } }
+
+.edit-note {
+  height: 100%; }
+  .edit-note__input {
+    width: calc(100% - 20px); }
 
 /*# sourceMappingURL=index.css.map */

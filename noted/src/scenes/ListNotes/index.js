@@ -75,6 +75,9 @@ class ListNotes extends Component {
             index={this.state.activeNote}
             updateNote={this.updateNote}
           />
+          <button onClick={this.closeModal} className="modal__close">
+            <span className="modal__close-text">&times;</span>
+          </button>
         </Modal>
       </div>
     );

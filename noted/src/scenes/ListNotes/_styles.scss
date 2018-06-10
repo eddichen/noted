@@ -40,3 +40,19 @@
     }
   }
 }
+
+.modal {
+  &__close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 0 15px;
+    cursor: pointer;
+
+    &-text {
+      font-size: 40px;
+      font-weight: bold;
+      opacity: 50%;
+    }
+  }
+}
