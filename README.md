@@ -18,11 +18,11 @@ To run the app from the terminal:
 ## App Features
 
 * Ability for a user to:
-  -- add a note
-  -- view a list of previously added notes
-  -- view the contents of a specific note (opens in a modal)
-  -- edit a note and autosave the note
-  -- access the app on various device types
+  * add a note
+  * view a list of previously added notes
+  * view the contents of a specific note (opens in a modal)
+  * edit a note and autosave the note
+  * access the app on various device types
 
 ## Future Improvements
 
