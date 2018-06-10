@@ -5,13 +5,39 @@
     list-style-type: none;
   }
 
+  &__note-item {
+    padding: 15px 0;
+    border-bottom: 1px dashed $colour-list-item-border;
+  }
+
   &__button {
     background-color: $colour-list-button-bg;
     border: none;
+    cursor: pointer;
+    padding: 0;
+    width: 100%;
+    @media (min-width: (480/16) + em) {
+      display: flex;
+      justify-content: space-between;
+    }
   }
 
-  &__note-item {
-    padding: 15px 0;
+  &__note-title {
+    margin: 0;
+    font-size: 18px;
+    @media (min-width: (480/16) + em) {
+      font-size: 24px;
+      display: flex;
+    }
+  }
+
+  &__note-date {
+    font-size: 14px;
+    color: #999;
+    @media (min-width: (480/16) + em) {
+      display: flex;
+      font-size: 18px;
+    }
   }
 }
 

@@ -36,10 +36,12 @@ class ListNotes extends Component {
     this.setState({ modalIsOpen: true });
   };
 
-  afterOpenModal = () => {};
-
   closeModal = () => {
     this.setState({ modalIsOpen: false });
+  };
+
+  formatDate = createdAtDate => {
+    return new Date(createdAtDate).toDateString();
   };
 
   render() {
@@ -56,7 +58,12 @@ class ListNotes extends Component {
                     onClick={() => this.openModal(key)}
                     className="list__button"
                   >
-                    {this.state.notes[key].noteTitle}
+                    <h2 className="list__note-title">
+                      {this.state.notes[key].noteTitle}
+                    </h2>
+                    <span className="list__note-date">
+                      {this.formatDate(this.state.notes[key].createdAt)}
+                    </span>
                   </button>
                 </li>
               ))}
