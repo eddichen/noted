@@ -2,6 +2,7 @@
   "name": "noted",
   "version": "0.1.0",
   "private": true,
+  "homepage": "http://eddichen.github.io/noted/noted",
   "dependencies": {
     "firebase": "^5.0.4",
     "re-base": "^3.2.3",
