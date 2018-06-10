@@ -53,6 +53,7 @@ class AddNote extends Component {
               }}
               placeholder="Add title here"
               className="form__input form__input--title add-note__input"
+              required
             />
             <label htmlFor="noteContent" className="form__label">
               Note
